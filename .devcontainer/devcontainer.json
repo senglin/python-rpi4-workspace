@@ -1,0 +1,21 @@
+{
+    "name": "Remote Pi Workspace",
+    "dockerFile": "Dockerfile",
+    "workspaceFolder": "/workspace",
+    "workspaceMount": "source=/home/pi,target=/workspace,type=bind,consistency=cached",
+    // Implementing DIND (Docker in Docker)
+    "mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" ],
+    "runArgs": [
+        "--privileged"
+    ],
+    "extensions": [
+        "ms-azuretools.vscode-docker",         // view and manage containers and image from VS Code
+        "chrisdias.vscode-opennewinstance",    // easily reopen the workspace from the Explorer pane
+        "ms-python.python",                    // python syntax highlighting
+        "eamodio.gitlens",                     // good tool to manage git changes
+        "donjayamanne.githistory"              // view graph of git commits
+    ],
+    // Set to "none" if you want to keep your containers running after VS Code shuts down.
+    // Set to "stopCompose" to close containers running after VS Code shuts down.
+    "shutdownAction": "none",
+}
