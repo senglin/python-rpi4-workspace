@@ -35,5 +35,10 @@ RUN apt-get autoremove -y && \
 
 RUN pip install --upgrade pip
 
+# Tools for python project
+RUN pip install -U pylint rope
 # Project specific library installations
-RUN pip install rpi.gpio pylint
+RUN pip install -U rpi.gpio Flask gpiozero
+
+# Forward ports
+EXPOSE 5000

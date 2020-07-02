@@ -5,8 +5,10 @@
     "workspaceMount": "source=/home/pi,target=/workspace,type=bind,consistency=cached",
     // Implementing DIND (Docker in Docker)
     "mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" ],
+    //"appPort": [5000], // only exposed locally on the machine with 127.0.0.1
     "runArgs": [
-        "--privileged"
+        "--privileged",
+        "-P"
     ],
     "extensions": [
         "ms-azuretools.vscode-docker",         // view and manage containers and image from VS Code
