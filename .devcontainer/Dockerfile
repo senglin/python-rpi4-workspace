@@ -36,9 +36,9 @@ RUN apt-get autoremove -y && \
 RUN pip install --upgrade pip
 
 # Tools for python project
-RUN pip install -U pylint rope
+RUN pip install -U pylint rope autopep8
 # Project specific library installations
-RUN pip install -U rpi.gpio Flask gpiozero
+RUN pip install -U rpi.gpio Flask requests gpiozero paho-mqtt colour
 
 # Forward ports
 EXPOSE 5000
