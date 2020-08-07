@@ -36,9 +36,9 @@ RUN apt-get autoremove -y && \
 RUN pip install --upgrade pip
 
 # Tools for python project
-RUN pip install -U pylint rope autopep8
-# Project specific library installations
-RUN pip install -U rpi.gpio Flask requests gpiozero paho-mqtt colour
+RUN pip install -U pylint rope autopep8 pipenv
+# Project specific library installations, virtual environment in current project .env folder
+ENV PIPENV_VENV_IN_PROJECT 1
 
 # Forward ports
 EXPOSE 5000
