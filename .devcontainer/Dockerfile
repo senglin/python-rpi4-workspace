@@ -36,7 +36,7 @@ RUN apt-get autoremove -y && \
 RUN pip install --upgrade pip
 
 # Tools for python project
-RUN pip install -U pylint rope autopep8 pipenv
+RUN pip install -U pipenv
 # Project specific library installations, virtual environment in current project .env folder
 ENV PIPENV_VENV_IN_PROJECT 1
 
