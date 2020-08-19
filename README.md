@@ -32,7 +32,7 @@ bash <(wget -qO- https://raw.githubusercontent.com/senglin/python-rpi4-workspace
 3. In a new window, click on the quick actions Status Bar item in the lower left corner.
 3. Select **Remote-Containers:Reopen in Container**.
 4. From the menu, select **Terminal -> New Terminal**.  You can now use the installed tools to clone, develop and build in your RPi4 device.
-5. As an example, you can try out this [Hello World]() project for the Raspberry Pi 4.
+5. As an example, you can try out this [Hello World](https://github.com/senglin/rpi-helloworld) project for the Raspberry Pi 4.
 
 
 ### Debugging Using VSCode
