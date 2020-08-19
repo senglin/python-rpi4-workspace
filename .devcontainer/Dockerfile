@@ -7,7 +7,7 @@
 # https://www.docker.com/blog/how-to-deploy-on-remote-docker-hosts-with-docker-compose/ 
 
 # Choose images from https://www.balena.io/docs/reference/base-images/base-images/
-FROM balenalib/armv7hf-python:3-latest
+FROM balenalib/armv7hf-python:3.7
 
 RUN apt-get update && \
     # apt-get upgrade && \
@@ -17,6 +17,8 @@ RUN apt-get update && \
                 git openssh-client zip vim less iproute2 procps lsb-release upx file make \
                 build-essential \
                 libstdc++6 \
+                # build third party python libraries
+                python3-dev \
                 # SSL dependencies
                 apt-transport-https ca-certificates gnupg2
 

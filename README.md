@@ -13,7 +13,7 @@
 ## Installed Frameworks
 5. Docker (Docker In Docker)
 6. Git 
-7. Python 3
+7. Python 3.7
 8. PipEnv
 9. Ruby
 10. Curl, Vim
